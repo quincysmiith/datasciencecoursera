@@ -39,3 +39,27 @@ data[["Ozone"]][[47]]
 # number of NAs in Ozone
 print("Number of NAs in Ozone")
 nrow(data) - nrow(na.omit(data["Ozone"]))
+
+# Question 17
+# Mean of Ozone NAs removed
+print("Mean of Ozone NAs removed")
+mean(data$Ozone, na.rm = TRUE)
+
+# Question 18
+# mean of solar when Ozone above 31 and Temp above 90
+new_data <- data[data$Ozone > 31, 1:6]
+new_data2 <- new_data[new_data$Temp > 90, 1:6]
+mean(new_data2$Solar.R, na.rm = TRUE)
+
+# Question 19
+# Mean of temp when month equal to 6
+june_data <- data[data$Month == '6', 1:6]
+mean(june_data$Temp)
+
+# Question 20
+# Max Ozone in May
+print("Max Ozone in May")
+may_data <- data[data$Month == 5 , 1:6]
+max(may_data$Ozone, na.rm = TRUE)
+
+
