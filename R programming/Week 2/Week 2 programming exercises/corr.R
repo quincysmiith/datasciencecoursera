@@ -75,9 +75,9 @@ corr <- function(directory, threshold = 0) {
             my_cor <- cor(x = new_data$nitrate, y = new_data$sulfate,
                           use = "pairwise.complete.obs")
             corr_vec[i] <- my_cor
-        } else {
-            corr_vec[[1]] <- 0
-        }
+        } #else {
+            #corr_vec[[1]] <- 0
+        #}
         
     }
     #corr_list <- as.vector(corr_list)
